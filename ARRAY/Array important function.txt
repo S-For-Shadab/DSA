@@ -1,0 +1,77 @@
+>>>>>>To return only middle part of array except first and last element:-
+
+import java.util.Arrays;
+public class Exercise {
+    static int[] middle(int[] arr) {
+        return Arrays.copyOfRange(arr, 1, arr.length-1); vvv important
+    }
+}
+
+like:-myArray=[1,2,3,4]
+o/p:-[2,3]
+
+>>>>>How to get two biggest element in array:-
+Solution to Best Score
+import java.util.Arrays;
+import java.util.Collections;
+public class Exercise {
+    static String firstSecond(Integer[] myArray) {
+        Integer[] arr = myArray;
+        Arrays.sort(arr, Collections.reverseOrder());
+        int first = arr[0];
+        Integer second = null;
+        for (int i=0; i<arr.length; i++) {
+          if (arr[i] != first) {
+            second = arr[i];
+            break;  
+          }
+        }
+        return first+" "+second;
+ 
+  }
+}
+
+>>>.PAIR OF GIVEN NUMBER IN ARRAY DATA STRUCTURE:-
+
+public class Exercise {
+  public static String pairSum(int[] myArray, int sum) {
+    String result = "";
+    for(int i=0; i<myArray.length; i++) {
+      for(int j=i+1; j<myArray.length; j++) {
+        if (myArray[i]+myArray[j]==sum) {
+          result += myArray[i]+":"+myArray[j]+" ";
+        }
+      }
+    }
+    return result;
+  }
+ 
+}
+
+
+.>>>>>to get the ranges of array :=
+ int [] myArray = new int[size];
+      System.out.println("Enter elements of the array");
+      for(int i=0; i< size; i++) {
+         myArray[i] = s.nextInt();
+      }
+      System.out.println(Arrays.toString(myArray));
+      int[] myArray1 = Arrays.copyOfRange(myArray, 0, myArray.length/2);
+      int[] myArray2 = Arrays.copyOfRange(myArray, myArray.length/2, myArray.length);
+      System.out.println("First half of the array:: "+Arrays.toString(myArray1));
+      System.out.println("First second of the array:: "+Arrays.toString(myArray2));
+   }
+}
+Output
+Enter the required size of the array ::
+6
+Enter elements of the array
+45
+63
+78
+96
+42
+19
+[45, 63, 78, 96, 42, 19]
+First half of the array:: [45, 63, 78]
+First second of the array:: [96, 42, 19]

@@ -1,0 +1,11 @@
+For deleting the element in any location :-
+Node temp=head;
+for(int i=0;i<location-1;i++){
+temp=temp.next;
+}
+temp.next=temp.next.next;
+
+
+>>>In Single linked list just made head=tail=null; 
+to delete all elements in a limkedlist but in circular singly linkedlist there 
+is a catch we have to make tail.next=null too.... GUESS WHY?????????????????

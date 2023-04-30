@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+
+       static void duplicate(int arr[], int n) {
+              HashMap<Integer, Integer> mp = new HashMap<>();
+
+              for (int i = 0; i < n; i++) {
+                     if (!mp.containsKey(arr[i])) {  ////check if arr[i] is there in map
+                            System.out.print(arr[i] + " ");   ////print it if not contains in map
+                            mp.put(arr[i], 1);     //////after printing add the array element in map
+                     }
+              }
+       }
+
+       public static void main(String[] args) {
+              int n = 9;
+              int arr[] = { 4, 3, 9, 2, 4, 1, 10, 89, 34 };
+
+              duplicate(arr, n);
+       }
+}
+Output: 4 3 9 2 1 10 89 34

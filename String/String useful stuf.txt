@@ -1,0 +1,31 @@
+##STRING BUILDER :-it is like string onlu but it will not make new element in heap memory when we concatenate and hence saves time
+
+
+StringBuilder sb=new StringBuilder("Tony");
+sysout(sb);   ///Tony
+
+sb.charAt(0)  ///T
+
+We can also set characters in stringbuilder
+
+sb.setCharAt(0,'P');
+sysout(sb);///Pony
+
+
+
+we can also insert character
+
+sb.insert(0,'S');
+sysout(sb);   ////SPony
+
+
+we can also delete substring in string
+
+sb.delete(2,3);
+sysout(sb);  ///SPny
+
+
+we can append element in string builder
+
+sb.append("l");
+sysout(sb);  ////SPnyl

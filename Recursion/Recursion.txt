@@ -1,0 +1,24 @@
+How to find gcd of two numbers
+:--By Euclidean method
+  // Question 3 - GCD
+  public int gcd(int a, int b) {
+    if (a<0 || b<0) {
+      return -1;
+    }
+    if (b == 0) {
+      return a;
+    }
+    return gcd(b, a%b);
+  }
+
+}
+
+>>>.Reverse a Strin by recursion:-
+
+public String reverse(String str)
+    {
+        if (str.isEmpty())
+            return str;
+        //Calling Function Recursively
+        return reverse(str.substring(1)) + str.charAt(0);
+    }

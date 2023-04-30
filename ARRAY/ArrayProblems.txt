@@ -1,0 +1,112 @@
+>>>>>>To return only middle part of array except first and last element:-
+
+import java.util.Arrays;
+public class Exercise {
+    static int[] middle(int[] arr) {
+        return Arrays.copyOfRange(arr, 1, arr.length-1); 
+    }
+}
+
+like:-myArray=[1,2,3,4]
+o/p:-[2,3]
+
+>>>>TO REVERSE AN ARAY USING COLLECTION CLASS:-
+import java.util.*;
+public class Main {
+   //Function to print array
+   static void printArray(Integer arr[], int n) {
+      System.out.print("Reversed array is:- \n");
+      for (int i = 0; i < n; i++) {
+         System.out.print(arr[i] + " ");
+      }
+   }
+   //Reverse array using library function
+   static void reverseArray(Integer arr[]) {
+      //fetching array as list object
+      //reversing the fetched object
+      Collections.reverse(Arrays.asList(arr));
+   }
+   public static void main(String[] args) {
+      int n = 5;
+      Integer arr[] = {5,4,3,2,1};
+      reverseArray(arr);
+      printArray(arr, n);
+   }
+}
+
+>>>>TO FIND SUM OF ARRAY USING COLLECTION
+ int n = 5;
+    int arr[] = {1,2,3,4,5};
+    int sum = IntStream.of(arr).sum();
+    System.out.println("The sum of the elements of the array is "+sum);
+
+
+>>>Rotate array to the right by k;
+class Solution {
+    public void rotate(int[] nums, int k) {
+      
+        k=k%nums.length;/////since we dont need to reverse whole array again and again
+        
+        //part1
+        reverse(nums,0,nums.length-k-1);
+        //part2
+        reverse(nums,nums.length-k,nums.length-1);
+        
+        
+        //full part
+        reverse(nums,0,nums.length-1);
+    }
+    
+    public void reverse(int num[],int i,int j){
+        while(i<j){
+            int temp=num[i];
+            num[i]=num[j];
+            num[j]=temp;
+            i++;
+            j--;
+        }
+    }
+}
+
+>>>>Convert Integer arraylist to int[] ans array;
+ ArrayList<Integer> a=new ArrayList<>();
+      for(int i=0;i<N;i++){
+          if(!(a.contains(A[i]))){
+               a.add(A[i]);
+          }
+      }
+    //   Integer[] ans=new Integer[a.size()]; 
+    //   for(int i=0;i<a.size();i++){
+    //       ans[i]=a.get(i);
+    //   }
+    int[] ans = a.stream().mapToInt(i->i).toArray();
+
+
+>>>Find duplicates and return linkedlist
+
+class Solution {
+    public static ArrayList<Integer> duplicates(int arr[], int n) {
+      Arrays.sort(arr);
+       Set setData = new HashSet<Integer>();
+       for (int i=1;i<n;i++) {
+           //check if adjecents are equal, then assign to set
+           if (arr[i]==arr[i-1]) {
+               setData.add(new Integer(arr[i]));
+           }
+       }
+       //convert set to arraylist and sort
+       ArrayList arrList = new ArrayList<Integer>(setData);
+       Collections.sort(arrList);
+       if (arrList.size()==0) {
+           arrList.add(-1);   
+       }
+       return arrList;
+   }
+}
+
+o/p:
+N = 5
+a[] = {2,3,1,2,3}
+Output: 2 3 
+Explanation: 2 and 3 occur more than once
+in the given array.

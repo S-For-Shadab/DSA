@@ -1,0 +1,15 @@
+Peek in function just gives last element present in stack:-
+[1,2,3,4]
+o/p:4
+
+>>>Push karne ke time dekho ki stack full hai na nahi aur initially topofstack pointer banao aur usko -1 alue do!!
+if we want to do pop operation see that stack is empty or not.
+
+>>>>For deleting the stack if we have implemented with array ,
+just put arr=null;
+and print "Stack is deleted"
+
+.>>>>Linkedlist operation me push karna hai to usko head se connect karege !!!!,ya to head null hoga yaa to kisi se connect hoga to dhyaan me rakhna
+
+
+.>.>>Delete karna hai stack ko to seedha head ko null  hahahahahahah!!!!
